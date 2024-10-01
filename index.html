@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+        .container {
+            height: 50vh;
+            width: 50vw;
+            background-color: pink;
+            border: 2px solid black;
+        }
+
+        .box {
+            height: 80px;
+            width: 80px;
+            /* animation-name: SejalAnimation;
+            animation-duration: 4s;
+            animation-iteration-count: 4;
+            animation-timing-function: cubic-bezier(0, 0.71, 0.15, 1.01);
+            animation-delay: 1s; */
+            /* animation-direction: alternate-reverse; */
+            /* animation-play-state: paused; */
+            animation: SejalAnimation 4s ease-out 1 forwards,
+                SejalP 4s ease-out 1;
+        }
+
+        /* in css we can use the key frames directly for animations */
+        @keyframes SejalAnimation {
+            from {
+                background-color: red;
+            }
+
+            to {
+                background-color: green;
+                transform: translate(1000px);
+            }
+
+        }
+
+        @keyframes SejalP {
+            20% {
+                transform: rotate(100deg);
+            }
+
+            40% {
+                transform: rotate(200deg);
+            }
+
+            60% {
+                transform: rotate(220deg);
+            }
+
+            80% {
+                transform: rotate(280deg);
+            }
+
+            100% {
+                transform: rotate(320deg);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">Box🎁</div>
+    </div>
+
+</body>
+
+</html>
